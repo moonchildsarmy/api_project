@@ -21,7 +21,7 @@ class NewsListView(generics.ListAPIView):
     #     search_params = {'title__iexact': title}
     #     return qs.filter(**search_params)
 
-class NewsDetailView(generics.ListAPIView):
+class NewsDetailView(generics.RetrieveAPIView):
     serializer_class = NewsDetailSerializer
     queryset = News.objects.all()
 

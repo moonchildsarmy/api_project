@@ -5,7 +5,7 @@ app_name = 'main'
 
 urlpatterns = [
     path('news/', views.NewsListView.as_view()),
-    path('news_detail/', views.NewsDetailView.as_view()),
+    path('news_detail/<int:pk>/', views.NewsDetailView.as_view()),
     path('news_create/', views.NewsCreateView.as_view()),
     path('news_update/<int:pk>/', views.NewsUpdateView.as_view()),
     path('category_show/<int:pk>', views.CategoryShowView.as_view()),
